@@ -1,4 +1,4 @@
-ARG NODE_VERSION=8
+ARG NODE_VERSION=10.3.0
 FROM node:10.3.0-stretch
 
 # add support for gpio library
