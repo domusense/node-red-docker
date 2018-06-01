@@ -5,7 +5,7 @@ fi
 
 NODE_RED_VERSION=$1
 
-docker build -f rpi/Dockerfile -t nodered/node-red-docker:rpi .
+docker build -f rpi/Dockerfile -t nodered:rpi .
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Docker build failed for rpi image"
