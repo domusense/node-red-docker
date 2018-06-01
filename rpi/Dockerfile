@@ -1,9 +1,11 @@
 ARG NODE_VERSION=10.3.0
 FROM node:10.3.0-stretch
 
-# add support for gpio library
 RUN apt-get update
-RUN apt-get install python-rpi.gpio
+RUN apt-get install python3 python3-pip
+
+# add support for gpio library
+RUN pip3 install RPi.GPIO 
 
 # Home directory for Node-RED application source code.
 RUN mkdir -p /usr/src/node-red
