@@ -1,5 +1,5 @@
 ARG NODE_VERSION=8
-FROM hypriot/rpi-node:${NODE_VERSION}
+FROM node:10.3.0-stretch
 
 # add support for gpio library
 RUN apt-get update
