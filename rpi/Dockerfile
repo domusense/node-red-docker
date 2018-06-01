@@ -15,8 +15,8 @@ WORKDIR /usr/src/node-red
 
 # Add node-red user so we aren't running as root.
 RUN useradd --home-dir /usr/src/node-red --no-create-home domu \
-    && chown -R node-red:node-red /data \
-    && chown -R node-red:node-red /usr/src/node-red
+    && chown -R domu:domu /data \
+    && chown -R domu:domu /usr/src/node-red
 
 USER domu
 
