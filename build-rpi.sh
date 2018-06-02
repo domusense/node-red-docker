@@ -23,7 +23,7 @@ fi
 
 #docker run -d domu/nodered-rpi:0.18.7
 
-docker run -d -p 1880:1880 -v /srv/nodered:/data --name nodered domu/nodered-rpi:0.18.7 
+docker run -d -p 1880:1880 -v node_red_user_data:/data --name nodered domu/nodered-rpi:0.18.7 
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Docker container failed to start for rpi build."
