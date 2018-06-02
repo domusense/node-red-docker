@@ -7,7 +7,7 @@
 
 NODE_RED_VERSION=10.3.0
 
-docker build -f rpi/Dockerfile -t domu/node-rpi:10.3.0-stretch .
+docker build -f rpi/Dockerfile -t domu/nodered-rpi:0.18.7 .
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Docker build failed for rpi image"
@@ -21,7 +21,9 @@ fi
 #    exit 1
 #fi
 
-docker run -d domu/node-rpi:10.3.0-stretch 
+#docker run -d domu/nodered-rpi:0.18.7
+
+docker run -d -p 1880:1880 -v /srv/nodered:/data --name nodered domu/nodered-rpi:0.18.7 
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Docker container failed to start for rpi build."
