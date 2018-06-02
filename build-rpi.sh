@@ -5,21 +5,21 @@ fi
 
 NODE_RED_VERSION=$1
 
-docker build -f rpi/Dockerfile -t nodered:rpi .
+docker build -f rpi/Dockerfile -t domu/node-rpi:10.3.0-stretch .
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Docker build failed for rpi image"
     exit 1
 fi
 
-docker tag nodered/node-red-docker:rpi nodered/node-red-docker:$NODE_RED_VERSION-rpi
+# docker tag nodered/node-red-docker:rpi nodered/node-red-docker:$NODE_RED_VERSION-rpi
 
-if [ $? -ne 0 ]; then
-    echo "ERROR: Docker tag failed for rpi image"
-    exit 1
-fi
+#if [ $? -ne 0 ]; then
+#    echo "ERROR: Docker tag failed for rpi image"
+#    exit 1
+#fi
 
-docker run -d nodered/node-red-docker:rpi
+docker run -d domu/node-rpi:10.3.0-stretch 
 
 if [ $? -ne 0 ]; then
     echo "ERROR: Docker container failed to start for rpi build."
