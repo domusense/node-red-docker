@@ -1,9 +1,11 @@
-if [ $# -ne 1 ]; then
-    echo $0: usage: build-rpi.sh NODE_RED_VERSION
-    exit 1
-fi
+#if [ $# -ne 1 ]; then
+#    echo $0: usage: build-rpi.sh NODE_RED_VERSION
+#    exit 1
+#fi
 
-NODE_RED_VERSION=$1
+#NODE_RED_VERSION=$1
+
+NODE_RED_VERSION=10.3.0
 
 docker build -f rpi/Dockerfile -t domu/node-rpi:10.3.0-stretch .
 
