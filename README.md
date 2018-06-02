@@ -1,3 +1,7 @@
+Usage
+=====
+git clone https://github.com/domusense/node-red-docker && cd node-red-docker && sh build-rpi.sh
+
 # Node-RED-Docker
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/node-red/node-red-docker.svg)](https://greenkeeper.io/)
@@ -10,11 +14,6 @@ is assumed.
 
 This project also provides the build for the `nodered/node-red-docker`
 container on [DockerHub](https://hub.docker.com/r/nodered/node-red-docker/).
-
-
-Usage
-=====
-git clone https://github.com/domusense/node-red-docker && cd node-red-docker && sh build-rpi.sh]
 
 To run this directly in docker at it's simplest just run
 
