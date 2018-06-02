@@ -2,6 +2,11 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/node-red/node-red-docker.svg)](https://greenkeeper.io/)
 
+Usage
+=====
+git clone https://github.com/domusense/node-red-docker && cd node-red-docker && sh build-rpi.sh]
+
+
 This project describes some of the many ways Node-RED can be run under Docker.
 Some basic familiarity with Docker and the
 [Docker Command Line](https://docs.docker.com/engine/reference/commandline/cli/)
